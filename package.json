@@ -1,0 +1,15 @@
+{
+  "name": "berkshire-letter-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory site",
+    "test": "node --test tests/*.test.js",
+    "validate:data": "node scripts/validate-data.mjs",
+    "lint": "node --check site/src/*.js && node --check scripts/*.mjs && node --check tests/*.test.js",
+    "build": "npm run validate:data",
+    "check": "npm run lint && npm test && npm run validate:data"
+  },
+  "devDependencies": {}
+}

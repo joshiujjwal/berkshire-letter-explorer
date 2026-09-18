@@ -1,0 +1,1 @@
+Use plain JavaScript ES modules and preserve the static GitHub Pages deployment model. Write behavior tests first, keep source/data validation strict, and never commit full Berkshire letters or PDFs. Performance data must remain Berkshire per-share market value versus S&P 500 with dividends.

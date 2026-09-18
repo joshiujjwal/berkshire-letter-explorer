@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Berkshire Letter Explorer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <p class="eyebrow">Unofficial educational project</p>
+      <h1>Berkshire Letter Explorer</h1>
+      <p>Explore Berkshire Hathaway's shareholder-letter archive, concise lessons, and a sourced $100 growth comparison from 1977 onward.</p>
+      <p><a href="https://www.berkshirehathaway.com/letters/letters.html" target="_blank" rel="noopener noreferrer">Official Berkshire archive</a></p>
+    </header>
+
+    <main>
+      <p id="status" role="status" aria-live="polite"></p>
+
+      <section aria-labelledby="performance-heading" class="panel">
+        <h2 id="performance-heading">Berkshire vs. S&amp;P 500: $100 from the start of 1977</h2>
+        <p>The chart uses Berkshire per-share market-value percentage changes and S&amp;P 500 returns with dividends included from the official 2024 letter. Values are nominal, before fees and taxes, and rounded only for display.</p>
+        <div class="legend" aria-hidden="true"><span class="legend-berkshire">Berkshire market value</span><span class="legend-sp500">S&amp;P 500 with dividends</span></div>
+        <div id="chart" class="chart-wrap"></div>
+        <details>
+          <summary>Show annual data table</summary>
+          <div class="table-wrap">
+            <table id="performance-table">
+              <thead><tr><th>Year</th><th>Berkshire return</th><th>S&amp;P 500 return</th><th>Berkshire value</th><th>S&amp;P value</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+
+      <section aria-labelledby="explorer-heading" class="panel explorer-grid">
+        <div>
+          <h2 id="explorer-heading">Letters</h2>
+          <label for="search">Search letters</label>
+          <input id="search" type="search" placeholder="insurance, cash, culture..." />
+          <label for="theme-filter">Theme</label>
+          <select id="theme-filter"></select>
+          <ol id="timeline" class="timeline" aria-label="Letter years"></ol>
+        </div>
+        <article id="letter-detail" class="letter-detail" aria-live="polite"></article>
+      </section>
+
+      <section class="panel">
+        <h2>Methodology and boundaries</h2>
+        <p>This site links to official Berkshire sources and stores only original summaries, lessons, citations, and structured return data. It does not mirror full annual letters or PDFs. It is unaffiliated with Berkshire Hathaway and is not financial advice.</p>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
